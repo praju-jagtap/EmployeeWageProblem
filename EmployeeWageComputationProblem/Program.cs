@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             Employee empWage = new Employee();
-            empWage.PartTime();
+            empWage.CalculateEmpWage();
         }
     }
 }
