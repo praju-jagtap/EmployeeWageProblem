@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             Employee empWage = new Employee();
-            empWage.CalculateEmpWage();
+            empWage.TotalWorkingHour();
         }
     }
 }
