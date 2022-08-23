@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome To Employee Wage Computation Problem");
+            Employee empWage = new Employee();
+            empWage.Attendence();
         }
     }
 }
