@@ -8,13 +8,12 @@ namespace EmployeeWageComputationProblem
 {
     internal class Employee
     {
-        const int IS_PART_TIME = 1, IS_FULL_TIME = 2, EMP_RATE_PER_HOUR = 20, NUM_OF_WORKING_DAY = 2, MAX_HOUR_IN_MONTH = 10;
-        public void TotalWorkingHour()
+        const int IS_PART_TIME = 1, IS_FULL_TIME = 2, EMP_RATE_PER_HOUR = 20, NUM_OF_WORKING_DAY = 20;
+        public void CalculateEmpWage()
         {
-            int empHrs = 0, totalEmpHrs=0, totalWorkingDays = 0;
-            while(totalEmpHrs <= MAX_HOUR_IN_MONTH && totalEmpHrs < NUM_OF_WORKING_DAY)
+            int empHrs = 0, empWage = 0, totalEmpWage = 0;
+            for (int day = 0; day < NUM_OF_WORKING_DAY; day++)
             {
-                totalWorkingDays++;
                 Random random = new Random();
                 int empCheck = random.Next(0, 3);
                 switch (empCheck)
@@ -29,11 +28,10 @@ namespace EmployeeWageComputationProblem
                         empHrs = 0;
                         break;
                 }
-                totalEmpHrs += empHrs;
-                Console.WriteLine("Day : " + totalWorkingDays + "\nEmployee Working Hours: " + empHrs);
+                empWage = empHrs * EMP_RATE_PER_HOUR;
+                totalEmpWage += empWage;
             }
-            int totalEmpWage = totalEmpHrs * EMP_RATE_PER_HOUR;
-            Console.WriteLine("Total Employee Wage: " + totalEmpWage);
+            Console.WriteLine("Total Employee Wage For Month : " + totalEmpWage);
         }
     }
 }
