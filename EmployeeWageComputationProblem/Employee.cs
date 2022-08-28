@@ -9,10 +9,10 @@ namespace EmployeeWageComputationProblem
     internal class Employee
     {
         const int IS_PART_TIME = 1, IS_FULL_TIME = 2, EMP_RATE_PER_HOUR = 20, NUM_OF_WORKING_DAY = 20, MAX_HOUR_IN_MONTH = 100;
-        public void TotalWorkingHour()
+        public void ComputeEmpWage()
         {
             int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
-            while (empHrs <= MAX_HOUR_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAY)
+            while (totalEmpHrs <= MAX_HOUR_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAY)
             {
                 totalWorkingDays++;
                 empHrs++;
