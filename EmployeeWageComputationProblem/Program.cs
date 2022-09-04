@@ -4,10 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Employee emp = new Employee();
-            emp.ComputeEmpWage("Dmart",20,100,20);
-            emp.ComputeEmpWage("Reliance",21,100,20);
-            emp.ComputeEmpWage("TCS",19,120,21);
+            Employee dmart = new Employee("Dmart", 20, 3, 10);
+            dmart.ComputeEmpWage();
+            Console.WriteLine(dmart.toString());
+            Employee reliance = new Employee("Reliance", 10, 4, 20);
+            reliance.ComputeEmpWage();
+            Console.WriteLine(reliance.toString());
         }
     }
 }
