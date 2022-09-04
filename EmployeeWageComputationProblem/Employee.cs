@@ -29,10 +29,10 @@ namespace EmployeeWageComputationProblem
                 int empCheck = random.Next(0, 3);
                 switch (empCheck)
                 {
-                    case IS_FULL_TIME:
+                    case IS_PART_TIME:
                         empHrs = 4;
                         break;
-                    case IS_PART_TIME:
+                    case IS_FULL_TIME:
                         empHrs = 8;
                         break;
 
